@@ -7,8 +7,11 @@ export default function Home(props) {
     let [totalResults, setTotalResults] = useState(0)
     let [page, setPage] = useState(1)
 
+    const apiKey = process.env.REACT_APP_NEWS_API_KEY;
+
+
     async function getAPIData() {
-        let response = await fetch(`https://newsapi.org/v2/everything?q=${props.q}&page=1&pageSize=24&language=${props.language}&sortBy=publishedAt&apiKey=867122afcadb48a68dbfc04cce6700b6`)
+        let response = await fetch(`https://newsapi.org/v2/everything?q=${props.q}&page=1&pageSize=24&language=${props.language}&sortBy=publishedAt&apiKey=${apiKey}`)
         response = await response.json()
         if (response.status === "ok") {
             setArticles(response.articles)
@@ -17,7 +20,7 @@ export default function Home(props) {
     }
     let fetchData = async () => {
         setPage(page + 1)
-        let response = await fetch(`https://newsapi.org/v2/everything?q=${props.q}&page=${page}&pageSize=24&language=${props.language}&sortBy=publishedAt&apiKey=867122afcadb48a68dbfc04cce6700b6`)
+        let response = await fetch(`https://newsapi.org/v2/everything?q=${props.q}&page=${page}&pageSize=24&language=${props.language}&sortBy=publishedAt&apiKey=${apiKey}`)
         response = await response.json()
         if (response.status === "ok") {
             setArticles(articles.concat(response.articles))
