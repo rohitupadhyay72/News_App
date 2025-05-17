@@ -34,7 +34,7 @@ export default function App() {
           <Route path="/cricket" element={<Home q={search ? search :  "Cricket"} language={language} />} />
           <Route path="/chess" element={<Home q={search ? search :  "Chess"} language={language} />} />
           <Route path="/jokes" element={<Home q={search ? search :  "Jokes"} language={language} />} />
-          <Route path="/mahakumbh" element={<Home q={search ? search :  "Mahakumbh"} language={language} />} />
+          <Route path="/trending" element={<Home q={search ? search :  "Trending"} language={language} />} />
 
 
         </Routes>

@@ -41,7 +41,7 @@ export default function Navbar(props) {
                                     <li><Link className="dropdown-item" onClick={(e) => clearSearch(e)} to="/Cricket">Cricket</Link></li>
                                     <li><Link className="dropdown-item" onClick={(e) => clearSearch(e)} to="/Chess">Chess</Link></li>
                                     <li><Link className="dropdown-item" onClick={(e) => clearSearch(e)} to="/Jokes">Jokes</Link></li>
-                                    <li><Link className="dropdown-item" onClick={(e) => clearSearch(e)} to="/Mahakumbh">Mahakumbh</Link></li>
+                                    <li><Link className="dropdown-item" onClick={(e) => clearSearch(e)} to="/Trending">Trending</Link></li>
                                 </ul>
                             </li>
                             <li className="nav-item dropdown"><a className="nav-link text-light dropdown-toggle" href="." role="button" data-bs-toggle="dropdown" aria-expanded="false" >Language</a>
